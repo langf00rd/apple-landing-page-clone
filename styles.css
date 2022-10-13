@@ -1,0 +1,151 @@
+@font-face {
+  font-family: sfPro;
+  src: url("./assets/fonts/sf-pro-display-regular.OTF");
+}
+
+* {
+  font-family: "sfPro", sans-serif;
+  text-decoration: none;
+  color: #000;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #0071e3;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+header {
+  border-bottom: 1px solid #d8d8d8c9;
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(255, 255, 255, 0.72);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 0 10px;
+  height: 55px;
+}
+
+.header-wrapper {
+  max-width: 980px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+header b {
+  font-size: 1.3rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  padding: 10px;
+  white-space: nowrap;
+  font-size: small;
+}
+
+nav a:hover {
+  color: var(--blue);
+}
+
+nav .chevron {
+  width: 15px;
+  height: 15px;
+  margin: 10px;
+}
+
+.buy-btn {
+  cursor: pointer;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 9999px;
+  font-weight: 400;
+  padding: 4px 11px;
+}
+
+.buy-btn:hover {
+  background: #147ce5;
+  color: #fff;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 1300px;
+}
+
+.mobile {
+  display: none;
+}
+
+.hero h1 {
+  font-size: 96px;
+  margin-bottom: 50px;
+}
+
+.hero h3 {
+  margin-top: 30px;
+}
+
+.gradient-text {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(
+    90deg,
+    #2ca2b4,
+    #5598de 24%,
+    #7f87ff 45%,
+    #f65aad 76%,
+    #ec3d43
+  );
+  font-size: 40px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  header nav a {
+    display: none;
+  }
+
+  header .buy-btn {
+    display: block;
+  }
+
+  .gradient-text {
+    font-size: 21px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
